@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Location Found</title>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Location Found</h1>
+        <p>This website can detect your connection details</p>
+
+        <div id="result">Detecting...</div>
+    </div>
+
+    <script>
+        fetch("https://ipwho.is/")
+            .then(response => response.json())
+            .then(data => {
+                if (!data.success) {
+                    throw new Error(data.message);
+                }
+
+                document.getElementById("result").innerHTML = `
+                    IP Address: <span class="value">${data.ip}</span><br>
+                    Country: <span class="value">${data.country}</span><br>
+                    City: <span class="value">${data.city}</span><br>
+                    ISP: <span class="value">${data.connection.isp}</span><br>
+                `;
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById("result").innerHTML =
+                    "Error: " + error.message;
+            });
+    </script>
+
+</body>
+</html>
