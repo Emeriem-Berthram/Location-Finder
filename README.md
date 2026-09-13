@@ -1,12 +1,12 @@
 # IP Location Detector
 A simple web-based IP location detector that retrieves a visitor's public IP address, country, city, and ISP using an external IP geolocation API.
 
-📌 # Overview
+ # Overview
 This project demonstrates how a frontend web application can retrieve publicly available connection information and display it in a simple, user-friendly interface.
 
 The application uses JavaScript's fetch() API to request IP and geolocation information and dynamically displays the returned data on the webpage.
 
-✨# Features
+# Features
 🌐 Detects the visitor's public IP address
 🌍 Displays the visitor's country
 📍 Displays the detected city
@@ -26,7 +26,7 @@ ip-location-detector/
 ├── style.css
 └── README.md
 
-🚀 # Getting Started
+# Getting Started
 1. Clone the repository
 git clone https://github.com/your-username/ip-location-detector.git
 
@@ -40,7 +40,7 @@ Open index.html in your web browser.
 
 For the best experience, you can also run the project using a local development server such as VS Code Live Server.
 
-🔎 How It Works
+# How It Works
 When the webpage loads, JavaScript sends a request to the IP geolocation API:
 
 fetch("https://ipwho.is/")
@@ -60,19 +60,19 @@ document.getElementById("result").innerHTML = `
     ISP: ${data.connection.isp}
 `;
 
-⚠️ # Important Notes
+ # Important Notes
 This project detects the public IP address visible to the external API. It does not reveal a device's private/local IP address such as 192.168.x.x.
 
 IP-based geolocation is approximate and may not represent the user's exact physical location.
 
 The accuracy of the country, city, and ISP information depends on the geolocation service and its database.
 
-🔐 # Privacy
+ # Privacy
 This project is intended for educational purposes. Users should be informed that their public IP address is being sent to an external IP geolocation service when they use the application.
 
 Do not use the project to collect, store, or distribute IP addresses without appropriate notice, consent, and compliance with applicable privacy laws.
 
-🎯 # Purpose
+ # Purpose
 This project was created as a practical demonstration of:
 
 Working with external APIs
