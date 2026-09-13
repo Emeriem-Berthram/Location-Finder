@@ -1,4 +1,4 @@
-🌍 # IP Location Detector
+# IP Location Detector
 A simple web-based IP location detector that retrieves a visitor's public IP address, country, city, and ISP using an external IP geolocation API.
 
 📌 # Overview
